@@ -37,3 +37,21 @@ foo()
 function foo(){
     console.log("This is foo");
 }
+
+
+
+
+
+let addNumbers = ()=>{
+    let c = a + b;
+    d = a * b;
+    return c;  //cannot return multiple variable;
+}
+let a = 10;
+let b = 20;
+let d;
+
+// if we declare a variable before calling function then that variable is global scope
+let res = addNumbers();
+console.log(res);
+console.log(d)
