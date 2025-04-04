@@ -33,31 +33,87 @@ let users = [
 
 
 
-for(let i = 0; i<users.length; i++){
+// for(let i = 0; i<users.length; i++){
+//     let bill = 0;
+//     if(users[i].unitsConsumed <= 30){
+//         users[i].bill = 80;
+//     }
+//     else if(users[i].unitsConsumed <= 50){
+//         users[i].bill = 80 + (users[i].unitsConsumed - 30) * 5;
+//     }
+//     else if(users[i].unitsConsumed <= 100){
+//         users[i].bill = 80 + 20 * 5 + (users[i].unitsConsumed - 50) * 7.5;
+//     }
+//     else if(users[i].unitsConsumed <= 200){
+//         users[i].bill = 80 + 20*5 + 50 *7.5 + (users[i].unitsConsumed - 100) * 12;
+//     }
+//     else if(users[i].unitsConsumed <= 300) {
+//         users[i].bill = 80 + 20*5 + 50*7.5 + 100 * 12 + (users[i].unitsConsumed-200) * 20;
+//     }
+//     else if(users[i].unitsConsumed <= 500){
+//         users[i].bill = 80 + 20*5 + 50*7.5 + 100*12 + 100*20 + (users[i].unitsConsumed-300)* 25;
+//     }
+//     else{
+//         users[i].bill = 80 + 20*5 + 50*7.5 + 100*12 +100*20 + 200*25 + (users[i].unitsConsumed-500)* 10;
+//     }
+// }
+// console.log(users);
+
+
+
+
+
+// for(let j in users){
+//     let bill = 0;
+//     if(users[j].unitsConsumed <= 30){
+//         users[j].bill = 80;
+//     }
+//     else if(users[j].unitsConsumed <= 50){
+//         users[j].bill = 80 + (users[j].unitsConsumed - 30) * 5;
+//     }
+//     else if(users[j].unitsConsumed <= 100){
+//         users[j].bill = 80 + 20 * 5 + (users[j].unitsConsumed - 50) * 7.5;
+//     }
+//     else if(users[j].unitsConsumed <= 200){
+//         users[j].bill = 80 + 20*5 + 50 *7.5 + (users[j].unitsConsumed - 100) * 12;
+//     }
+//     else if(users[j].unitsConsumed <= 300) {
+//         users[j].bill = 80 + 20*5 + 50*7.5 + 100 * 12 + (users[j].unitsConsumed-200) * 20;
+//     }
+//     else if(users[j].unitsConsumed <= 500){
+//         users[j].bill = 80 + 20*5 + 50*7.5 + 100*12 + 100*20 + (users[j].unitsConsumed-300)* 25;
+//     }
+//     else{
+//         users[j].bill = 80 + 20*5 + 50*7.5 + 100*12 +100*20 + 200*25 + (users[j].unitsConsumed-500)* 10;
+//     }
+// }
+// console.log(users);
+
+
+
+for(let m of users){
     let bill = 0;
-    if(users[i].unitsConsumed <= 30){
-        users[i].bill = 80;
+    if(m.unitsConsumed <= 30){
+        m.bill = 80;
     }
-    else if(users[i].unitsConsumed <= 50){
-        users[i].bill = 80 + (users[i].unitsConsumed - 30) * 5;
+    else if(m.unitsConsumed <= 50){
+        m.bill = 80 + (m.unitsConsumed - 30) * 5;
     }
-    else if(users[i].unitsConsumed <= 100){
-        users[i].bill = 80 + 20 * 5 + (users[i].unitsConsumed - 50) * 7.5;
+    else if(m.unitsConsumed <= 100){
+        m.bill = 80 + 20 * 5 + (m.unitsConsumed - 50) * 7.5;
     }
-    else if(users[i].unitsConsumed <= 200){
-        users[i].bill = 80 + 20*5 + 50 *7.5 + (users[i].unitsConsumed - 100) * 12;
+    else if(m.unitsConsumed <= 200){
+        m.bill = 80 + 20*5 + 50 *7.5 + (m.unitsConsumed - 100) * 12;
     }
-    else if(users[i].unitsConsumed <= 300) {
-        users[i].bill = 80 + 20*5 + 50*7.5 + 100 * 12 + (users[i].unitsConsumed-200) * 20;
+    else if(m.unitsConsumed <= 300) {
+        m.bill = 80 + 20*5 + 50*7.5 + 100 * 12 + (m.unitsConsumed-200) * 20;
     }
-    else if(users[i].unitsConsumed <= 500){
-        users[i].bill = 80 + 20*5 + 50*7.5 + 100*12 + 100*20 + (users[i].unitsConsumed-300)* 25;
+    else if(m.unitsConsumed <= 500){
+        m.bill = 80 + 20*5 + 50*7.5 + 100*12 + 100*20 + (m.unitsConsumed-300)* 25;
     }
     else{
-        users[i].bill = 80 + 20*5 + 50*7.5 + 100*12 +100*20 + 200*25 + (users[i].unitsConsumed-500)* 10;
+        m.bill = 80 + 20*5 + 50*7.5 + 100*12 +100*20 + 200*25 + (m.unitsConsumed-500)* 10;
     }
 }
+
 console.log(users);
-
-
-
