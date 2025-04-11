@@ -134,3 +134,8 @@ prom.then(()=>{
 .catch((err)=>{
     console.log(err)
 })
+
+
+
+// chaining of promises
+// nesting of promise is where function are dependent to each other
