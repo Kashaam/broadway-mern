@@ -139,3 +139,90 @@ prom.then(()=>{
 
 // chaining of promises
 // nesting of promise is where function are dependent to each other
+
+
+
+
+const function1 = (x)=>{
+    console.log("we are in function1")
+    return new Promise((res, rej)=>{
+        if(x){
+            res('This is resolve1');
+        }
+        else{
+            rej("This is error of function1");
+        }
+    })
+}
+
+
+const function2 = (x)=>{
+    console.log("WE are in function2");
+    return new Promise((res, rej)=>{
+        if(x){
+            res("This is resolve of function2")
+        }
+        else{
+            rej('This is reject of function2')
+        }
+    })
+}
+
+
+const function3 = (x)=>{
+    console.log("WE are in function3");
+    return new Promise((res, rej)=>{
+        if(x){
+            res("This is resolve of function3")
+        }
+        else{
+            rej('This is reject of function3')
+        }
+    })
+}
+
+
+//nesting in promise
+
+
+// function1(true).then((resolve)=>{
+//     console.log(resolve);
+//     function2(true).then((resolve)=>{
+//         console.log(resolve);
+//         function3(true)
+//         .then((resolve)=>{
+//             console.log(resolve)
+//         })
+//         .catch((reject)=>{
+//             console.log(reject)
+//         })
+//     })
+//     .catch((reject)=>{
+//         console.log(reject)
+//     })
+// })
+// .catch((reject)=>{
+//     console.log(reject)
+// })
+
+
+
+
+
+//chaining in promise
+
+function1(true)
+.then((resolve)=>{
+    console.log(resolve)
+    return function2(false)
+})
+.then((resolve)=>{
+    console.log(resolve)
+    return function3(true)
+})
+.then((resolve)=>{
+    console.log(resolve)
+})
+.catch((reject)=>{
+    console.log(reject)
+})

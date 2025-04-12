@@ -89,3 +89,6 @@ const functionHandle = async()=>{
     }
 }
 functionHandle();
+
+ let mat = Math.ceil(3.6)
+console.log(mat)
